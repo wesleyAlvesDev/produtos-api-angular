@@ -1,0 +1,15 @@
+<mat-card>
+    <mat-card-title> Alterar produto </mat-card-title>
+    <form [formGroup]="productsForm">
+        <mat-form-field>
+            <input matInput placeholder="Nome" formControlName="name" name="name">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Preço (R$)" formControlName="price" name="price">
+        </mat-form-field>
+    </form>
+    
+    <button mat-raised-button (click)="updateProduct()" color="primary"> Atualizar </button>
+    <button mat-raised-button (click)="cancel()"> Cancelar </button>
+</mat-card>

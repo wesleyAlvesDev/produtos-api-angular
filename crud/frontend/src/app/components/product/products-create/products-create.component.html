@@ -1,0 +1,15 @@
+<mat-card>
+    <mat-card-title> Novo produto </mat-card-title>
+    <form [formGroup]="cadProducts">
+        <mat-form-field>
+            <input matInput placeholder="Nome" name="name" formControlName="name">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Preço (R$)" name="price" formControlName="price">
+        </mat-form-field>
+    </form>
+    
+    <button mat-raised-button (click)="createProduct()" color="primary"> Salvar </button>
+    <button mat-raised-button (click)="cancel()"> Cancelar </button>
+</mat-card>
